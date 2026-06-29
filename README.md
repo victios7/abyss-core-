@@ -1,6 +1,6 @@
 
 
-# ABYSS::CORE — GitHub Pages Deployment
+# ABYSS::CORE 
 
 ## What you get
 
@@ -38,7 +38,6 @@ No server, no Node.js, no backend — just one HTML file.
 
 | Problem | Fix |
 |---|---|
-| Site shows 404 | Wait 60s after enabling Pages; make sure `index.html` is at repo root, not in a subfolder |
 | `argon2 is not defined` | CDN may be blocked; check browser console and network tab |
 | Encryption very slow | Argon2id with 128MB/5 iterations takes 8–20 seconds — this is by design |
 | Oracle AI fails | Pollinations API may be rate-limited; try again after 10s |
