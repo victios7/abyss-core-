@@ -22,78 +22,7 @@ No server, no Node.js, no backend — just one HTML file.
 > ⚠️ Seeds from the Replit server (v2) are NOT compatible with the GitHub Pages version (v3).
 > They use different KDF info strings and cipher chains. Each version decrypts only what it encrypted.
 
----
 
-## Deployment — Exact Steps
-
-### 1. Create the GitHub repository
-
-```bash
-# Option A: via GitHub CLI
-gh repo create abyss-core --public --clone
-cd abyss-core
-
-# Option B: manually
-# Go to https://github.com/new
-# Name: abyss-core
-# Visibility: Public (required for free GitHub Pages)
-# Click "Create repository"
-# Then clone it:
-git clone https://github.com/YOUR_USERNAME/abyss-core.git
-cd abyss-core
-```
-
-### 2. Copy the file
-
-Copy `index.html` from this folder into the root of your repository:
-
-```bash
-# From the github-pages/ folder in this project:
-cp github-pages/index.html /path/to/abyss-core/index.html
-```
-
-Or download it manually and place it at the repo root.
-
-### 3. Push to GitHub
-
-```bash
-cd abyss-core
-git add index.html
-git commit -m "Deploy ABYSS::CORE"
-git push origin main
-```
-
-### 4. Enable GitHub Pages
-
-1. Go to your repository on GitHub
-2. Click **Settings** → **Pages** (left sidebar)
-3. Under **Source**, select **Deploy from a branch**
-4. Branch: `main` · Folder: `/ (root)`
-5. Click **Save**
-
-### 5. Access your site
-
-After ~30–60 seconds, your site will be live at:
-
-```
-https://YOUR_USERNAME.github.io/abyss-core/
-```
-
-That's it. No build step, no npm install, no config files.
-
----
-
-## Custom Domain (optional)
-
-1. Buy a domain (e.g. `abyss-core.io`)
-2. In your DNS provider, add a CNAME record:
-   ```
-   CNAME  www  YOUR_USERNAME.github.io
-   ```
-3. In GitHub repo Settings → Pages → Custom domain, enter `www.abyss-core.io`
-4. Check **Enforce HTTPS**
-
----
 
 ## Security notes
 
